@@ -1,0 +1,29 @@
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-self: flex-end;
+}
+
+.nav-list {
+    float: right;
+    text-align: center;
+}
+
+.nav-bar {
+    border: 1px solid black;
+    font-size: 20px;
+    padding: 30px;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+}
+
+a {
+    padding: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.name {
+    position: relative;
+}
