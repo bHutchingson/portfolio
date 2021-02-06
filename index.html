@@ -5,18 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/reset.css">
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>Portfolio</title>
 </head>
 <body>
-    <nav class="nav-bar">
-        <h1 class="name">Brandon Hutchingson</h1>
-        <ul class="nav-list">
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Resume</a></li>
-        </ul>
+  
+    <section class="parallax-wrapper">
         
-    </nav>
+        <div class="content-nav">
+            <nav>
+                <h1 class="name">Brandon Hutchingson</h1>
+                <ul>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>  
+            </nav>
+        </div>
+        <!-- <button id="scroll">Next Page</button> -->
+    </section>
+
+    <section class="regular-wrapper" id="about-me">
+        <div class="content about-me">
+            <h2>About Me</h2>
+            <p>My name is Brandon, I'm a Web Developer based in Columbus Ohio.</p>
+        </div>
+    </section>
+
+    <section class="parallax-wrapper-2" id="projects">
+        <div class="content projects">
+            <h2>Projects</h2>
+            <div class="grid-container">
+
+                <div class="main-project">
+                    <a target="_blank" href="https://www.google.com/">
+                        <div class="main-project"></div>
+                    </a>
+                </div>
+
+                <div class="sub-p1">
+                    <a target="_blank" href="https://www.google.com/">
+                        <div class="sub-p1"></div>
+                    </a>
+                </div>
+
+                <div class="sub-p2">
+                    <a target="_blank" href="https://www.dndbeyond.com/">
+                        <div class="sub-p2"></div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="regular-wrapper-2" id="contact">
+        <div class="content contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p><strong>Phone:</strong> 904-999-9588</p>
+                <p><strong>Email:</strong> Hutchingsonb@gmail.com</p>
+                <p><strong>Github:</strong> bHutchingson</p>
+
+            </div>
+        </div>
+    </footer>
+
+
 </body>
 </html>

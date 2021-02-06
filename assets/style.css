@@ -1,29 +1,218 @@
-.nav-list {
-    list-style-type: none;
-    display: flex;
-    justify-self: flex-end;
-}
-
-.nav-list {
-    float: right;
-    text-align: center;
-}
-
-.nav-bar {
-    border: 1px solid black;
-    font-size: 20px;
-    padding: 30px;
-    position: fixed;
-    width: 100%;
+/* Main page styling */
+html {
     overflow: hidden;
+    scroll-behavior: smooth;
+}
+body {
+    height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x:hidden;
+    overflow-y:auto;
 }
 
-a {
+/* Nav bar styling */
+nav a {
     padding: 20px;
     text-decoration: none;
-    color: #333;
+    color: white;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px 5px 0 0;
+}
+
+nav a:hover {
+    color: #344d52;
+    background-color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+    padding: 0 5px 10px 5px;
+}
+
+nav {
+    font-size: 20px;
+    padding: 10px 0 50px 0;
+    width: 100%;
+    height: 100px;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .name {
     position: relative;
+    color: white;
+    font-size: 50px;
+    background-color: #344d52;
+    padding: 10px;
+    top: 100px;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 0 10px 10px 0px;
+    box-shadow: 5px 5px 10px white;
+    display: flex;
+    margin: -5px;
+}
+
+/* main content pages / parallax scrolling */
+.parallax-wrapper {
+    width: 100vw;
+    height:100vh;
+    padding-top:20vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+
+.parallax-wrapper-2 {
+    width: 100vw;
+    height:100vh;
+    padding-top:20vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+
+.regular-wrapper {
+    width: 100vw;
+    height:100vh;
+    padding-top:20vh;
+    background-image: url(/assets/images/worms-dirt.jpg);
+    background-size: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+.regular-wrapper-2 {
+    width: 100vw;
+    height:100vh;
+    padding-top:20vh;
+    background-image: url(/assets/images/treasure.jpg);
+    background-size: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+.parallax-wrapper::before {
+    content:"";
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left:0;
+    background-image: url(/assets/images/mushrooms.jpg);
+    background-size: 100%;
+    position: absolute;
+    z-index: -1;
+    transform:translateZ(-1px) scale(2);
+}
+
+.parallax-wrapper-2::before {
+    content:"";
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left:0;
+    background-image: url(/assets/images/worms-dirt.jpg);
+    background-size: 100%;
+    position: absolute;
+    z-index: -1;
+    transform:translateZ(-1px) scale(2);
+}
+
+/* main content styles */
+.content {
+    margin: 0 auto;
+    padding: 50px;
+    width: 50%;
+    background: #fff;
+}
+
+.content p {
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.content h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.content-nav {
+    margin: 0 auto;
+    padding: 50px;
+    width: 50%;
+    display: flex;
+}
+
+.projects h2 {
+    margin-bottom: 2em;
+}
+
+.about-me, .projects, .contact  {
+    background: none;
+    color: white;
+    padding: 10px;
+}
+
+/* project grid layout */
+.grid-container {
+    display: grid;
+    width: auto;
+    height: 200px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3em 3em;
+    
+}
+
+.main-project {
+    grid-area: 1 / 1 / 2 / 3;
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+    background-image: url(/assets/images/horiseon.png);
+    background-size: 100%;
+    border: solid 3px black;
+}
+
+.sub-p1 {
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    grid-area: 2 / 2 / 3 / 3;
+    background-image: url(/assets/images/google.png);
+    background-size: 100%;
+    border: solid 3px black;
+}
+
+.sub-p2 {
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    grid-area: 2 / 1 / 3 / 2;
+    background-image: url(/assets/images/dnd-beyond.png);
+    background-size: 100%;
+    border: solid 3px black;
+}
+
+.main-project, 
+.sub-p1, 
+.sub-p2 {
+    box-shadow: 0 0 10px 5px #fff;
+}
+
+.main-project:hover, 
+.sub-p1:hover, 
+.sub-p2:hover {
+    box-shadow: 0 0 10px 5px #344d52;
+    transition: all .3s ease-in;
+    
+}
+
+.contact-info {
+    display: flex;
+    padding: 30px;
 }
